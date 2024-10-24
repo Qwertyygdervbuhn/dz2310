@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объем цилиндра</title>
+</head>
+
+<body>
+    <h2>Рассчитать объем цилиндра</h2>
+    Радиус (r): <input type="number" id="radius"><br><br>
+    Высота (h): <input type="number" id="height"><br><br>
+
+    <button onclick="calculate()">Рассчитать</button>
+
+    <div>Объем цилиндра: <div id="result"></div></div>
+
+    <script>
+   
+        function calculate() {
+            var r = document.getElementById('radius').value;
+            var h = document.getElementById('height').value;
+
+
+            var volume = Math.PI * r * r * h;
+
+          
+            var roundedVolume = Math.round(volume * 100) / 100;
+
+            document.getElementById('result').innerText = roundedVolume;
+        }
+    </script>
+</body>
+
+</html>
